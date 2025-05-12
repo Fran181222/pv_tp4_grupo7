@@ -6,7 +6,7 @@ Desarrollo trabajo práctico n° 4
 ## Lista de Integrantes Grupo 7
 1. Davide Arroyo - usuario: davarr
 2. Ruan Castiel Lindon Villanueva - usuario: Ruancas
-3. Francisco Javier Ricardo Quispe - usuario: Fran181222
+3. usuario: Fran181222 - Francisco Javier Ricardo Quispe
 4. Gabriel Ignacio Roel - usuario: GabrielGIR
 5. Brian Llanos - usuario: BrianLlanos1001
 
