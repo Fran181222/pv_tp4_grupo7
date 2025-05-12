@@ -10,9 +10,10 @@ Desarrollo trabajo práctico n° 4
 4. Gabriel Ignacio Roel - usuario: GabrielGIR
 5. Brian Agustín Llanos- usuario: BrianLlanos1001
 
-## Descripciòn del proyecto
+## Descripción del proyecto
 Desarrollar una aplicación web utilizando Vite con plantilla de React, que permita gestionar una lista de productos. 
 
-## Asisntecia 12/5
+## Asistecia 12/5
 1. Gabriel Ignacio Roel - usuario:GabrielGIR
 2. Brian Agustín Llanos - usuario:BrianLlanos1001
+3. Ruan Castiel Lindon Villanueva - usuario:Ruancas
