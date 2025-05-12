@@ -1,7 +1,7 @@
 ## pv_tp4_grupo7
 Desarrollo trabajo práctico n° 4
 
-[text](https://virtual.unju.edu.ar/pluginfile.php/905610/mod_resource/content/1/Trabajo%20Pr%C3%A1ctico%204.pdf)
+[TP4.pdf](https://virtual.unju.edu.ar/pluginfile.php/905610/mod_resource/content/1/Trabajo%20Pr%C3%A1ctico%204.pdf)
 
 ## Lista de Integrantes Grupo 7
 1. Davide Arroyo - usuario: davarr
