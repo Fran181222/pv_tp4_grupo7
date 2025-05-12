@@ -4,7 +4,7 @@ Desarrollo trabajo práctico n° 4
 [TP4.pdf](https://virtual.unju.edu.ar/pluginfile.php/905610/mod_resource/content/1/Trabajo%20Pr%C3%A1ctico%204.pdf)
 
 ## Lista de Integrantes Grupo 7
-1. Davide Arroyo - usuario: davarr
+1. Usuario: davarr - Davide Arroyo
 2. Ruan Castiel Lindon Villanueva - usuario: Ruancas
 3. usuario: Fran181222 - Francisco Javier Ricardo Quispe
 4. Gabriel Ignacio Roel - usuario: GabrielGIR
