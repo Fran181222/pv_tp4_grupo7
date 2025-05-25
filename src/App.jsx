@@ -20,14 +20,14 @@ const App = () => {
      });
    }, []);
 
-  // const handleUpdate = useCallback((updatedProduct) => {
-  //   setProducts(prev => prev.map(p => p.id === updatedProduct.id ? updatedProduct : p));
-  //   setEditingProduct(null);
-  // }, []);
+  const handleUpdate = useCallback((updatedProduct) => {
+    setProducts(prev => prev.map(p => p.id === updatedProduct.id ? updatedProduct : p));
+    setEditingProduct(null);
+  }, []);
 
-  // const handleDelete = useCallback((id) => {
-  //   setProducts(prev => prev.filter(p => p.id !== id));
-  // }, []);
+  const handleDelete = useCallback((id) => {
+    setProducts(prev => prev.filter(p => p.id !== id));
+ }, []);
 
   const handleSearch = useCallback((term) => {
     setSearchTerm(term);
@@ -49,11 +49,11 @@ const App = () => {
     <div>
       <h1>Trabajo Practico 4</h1>
       <SearchBar onSearch={handleSearch} />
-      {/* <ProductForm
+      {<ProductForm
         onAdd={handleAdd}
         onUpdate={handleUpdate}
         editingProduct={editingProduct}
-      /> */}
+      />}
       <ProductList
         products={filteredProducts}
          onEdit={handleEdit}
