@@ -6,19 +6,19 @@ import './App.css'
 
 
 const App = () => {
-  // const [products, setProducts] = useState([]);
-  // const [editingProduct, setEditingProduct] = useState(null);
-  const [searchTerm, setSearchTerm] = useState('');
+   const [products, setProducts] = useState([]);
+   const [editingProduct, setEditingProduct] = useState(null);
+   const [searchTerm, setSearchTerm] = useState('');
 
-// const handleAdd = useCallback((product) => {
-  //   setProducts(prev => {
-  //     if (prev.find(p => p.id === product.id)) {
-  //       alert('Ya existe un producto con ese ID.');
-  //       return prev;
-  //     }
-  //     return [...prev, product];
-  //   });
-  // }, []);
+ const handleAdd = useCallback((product) => {
+     setProducts(prev => {
+       if (prev.find(p => p.id === product.id)) {
+         alert('Ya existe un producto con ese ID.');
+         return prev;
+       }
+       return [...prev, product];
+     });
+   }, []);
 
   // const handleUpdate = useCallback((updatedProduct) => {
   //   setProducts(prev => prev.map(p => p.id === updatedProduct.id ? updatedProduct : p));
@@ -33,9 +33,9 @@ const App = () => {
     setSearchTerm(term);
   }, []);
 
-  // const handleEdit = useCallback((product) => {
-  //   setEditingProduct(product);
-  // }, []);
+   const handleEdit = useCallback((product) => {
+     setEditingProduct(product);
+   }, []);
 
   const filteredProducts = useMemo(() => {
   const term = searchTerm.toLowerCase();
