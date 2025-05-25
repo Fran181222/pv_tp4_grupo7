@@ -1,35 +1,98 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import React, { useState, useMemo, useCallback } from 'react';
+// import SearchBar from './components/SearchBar';
+// import './App.css'
+
+// const App = () => {
+//     const [searchTerm, setSearchTerm] = useState('');
+
+// const handleSearch = useCallback((term) => {
+//     setSearchTerm(term);
+//   }, []);
+  
+//  const filteredProducts = useMemo(() => {
+//   const term = searchTerm.toLowerCase();
+//   return products.filter(p =>
+//     p.descripcion.toLowerCase().includes(term) ||
+//     p.id.toString().includes(term)
+//   );
+// }, [products, searchTerm]);
+
+// return (
+
+// <div className="max-w-2xl mx-auto p-4">
+//       <h1 className="text-2xl font-bold mb-4 text-center">Trabajo Practico 4</h1>
+//       <SearchBar onSearch={handleSearch} />
+//       <ProductList
+//       products={filteredProducts} />
+// </div>
+//  );
+// };
+// export default App;
+
+// App.jsx
+import React, { useState, useMemo, useCallback } from 'react';
+import ProductForm from './components/ProductForm';
+// import ProductList from './components/ProductList';
+import SearchBar from './components/SearchBar';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+const App = () => {
+  // const [products, setProducts] = useState([]);
+  // const [editingProduct, setEditingProduct] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+
+// const handleAdd = useCallback((product) => {
+  //   setProducts(prev => {
+  //     if (prev.find(p => p.id === product.id)) {
+  //       alert('Ya existe un producto con ese ID.');
+  //       return prev;
+  //     }
+  //     return [...prev, product];
+  //   });
+  // }, []);
+
+  // const handleUpdate = useCallback((updatedProduct) => {
+  //   setProducts(prev => prev.map(p => p.id === updatedProduct.id ? updatedProduct : p));
+  //   setEditingProduct(null);
+  // }, []);
+
+  // const handleDelete = useCallback((id) => {
+  //   setProducts(prev => prev.filter(p => p.id !== id));
+  // }, []);
+
+  const handleSearch = useCallback((term) => {
+    setSearchTerm(term);
+  }, []);
+
+  // const handleEdit = useCallback((product) => {
+  //   setEditingProduct(product);
+  // }, []);
+
+  const filteredProducts = useMemo(() => {
+  const term = searchTerm.toLowerCase();
+  return products.filter(p =>
+    p.descripcion.toLowerCase().includes(term) ||
+    p.id.toString().includes(term)
+  );
+}, [products, searchTerm]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="max-w-2xl mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4 text-center">Trabajo Practico 4</h1>
+      <SearchBar onSearch={handleSearch} />
+      {/* <ProductForm
+        onAdd={handleAdd}
+        onUpdate={handleUpdate}
+        editingProduct={editingProduct}
+      /> */}
+      <ProductList
+        products={filteredProducts}
+        // onEdit={handleEdit}
+        // onDelete={handleDelete}
+      />
+    </div>
+  );
+};
 
-export default App
+export default App;
