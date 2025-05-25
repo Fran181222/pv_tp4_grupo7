@@ -1,38 +1,6 @@
-// import React, { useState, useMemo, useCallback } from 'react';
-// import SearchBar from './components/SearchBar';
-// import './App.css'
-
-// const App = () => {
-//     const [searchTerm, setSearchTerm] = useState('');
-
-// const handleSearch = useCallback((term) => {
-//     setSearchTerm(term);
-//   }, []);
-  
-//  const filteredProducts = useMemo(() => {
-//   const term = searchTerm.toLowerCase();
-//   return products.filter(p =>
-//     p.descripcion.toLowerCase().includes(term) ||
-//     p.id.toString().includes(term)
-//   );
-// }, [products, searchTerm]);
-
-// return (
-
-// <div className="max-w-2xl mx-auto p-4">
-//       <h1 className="text-2xl font-bold mb-4 text-center">Trabajo Practico 4</h1>
-//       <SearchBar onSearch={handleSearch} />
-//       <ProductList
-//       products={filteredProducts} />
-// </div>
-//  );
-// };
-// export default App;
-
-// App.jsx
 import React, { useState, useMemo, useCallback } from 'react';
 import ProductForm from './components/ProductForm';
-// import ProductList from './components/ProductList';
+import ProductList from './components/ProductList';
 import SearchBar from './components/SearchBar';
 import './App.css'
 
@@ -78,8 +46,8 @@ const App = () => {
 }, [products, searchTerm]);
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 text-center">Trabajo Practico 4</h1>
+    <div>
+      <h1>Trabajo Practico 4</h1>
       <SearchBar onSearch={handleSearch} />
       {/* <ProductForm
         onAdd={handleAdd}
@@ -88,8 +56,8 @@ const App = () => {
       /> */}
       <ProductList
         products={filteredProducts}
-        // onEdit={handleEdit}
-        // onDelete={handleDelete}
+         onEdit={handleEdit}
+         onDelete={handleDelete}
       />
     </div>
   );
